@@ -1,4 +1,5 @@
 const InfectedStream = require('./InfectedStream.js')
+const mainOptions = require('./mainOptions')
 
 var state = {
     infectedUsers: [[], [], [], [], [], [], []],
@@ -17,7 +18,12 @@ const addNewInfectedChannel = (channel, infector) => {
 const getStats = () => {
     const totalInfectedUsers = state.infectedUsers.reduce((a, c) => a + c.length, 0)
     const totalInfectedStreams = Object.keys(state.infectedChannels).length
-    return { users: totalInfectedUsers, streams: totalInfectedStreams }
+    return { 
+        game: mainOptions.game,
+        transmissionTime: mainOptions.transmissionTime, 
+        users: totalInfectedUsers, 
+        streams: totalInfectedStreams,
+     }
 }
 
 const hashKey = username => username.split('').reduce((a, c) => a + c.charCodeAt(), 0) % 7
@@ -45,7 +51,10 @@ const newMessage = (target, context) => {
     }
 }
 
-state.infectedUsers[hashKey('americanape')].push('americanape')
+for (var patient of mainOptions.patientZeroes){
+    state.infectedUsers[hashKey(patient)].push(patient)
+}
+
 
 var count = 0
 var started = false

@@ -1,4 +1,5 @@
 {
     "game": null,
-    "transmissionTime": 300
+    "transmissionTime": 5,
+    "patientZeroes": ["americanape"]
 }

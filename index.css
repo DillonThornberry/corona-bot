@@ -1,8 +1,29 @@
-body {
-    width: 100vw;
-    height: 100vh;
-}
-
 h1 {
     color: red;
+    font-size: 20pt;
+}
+
+h2 {
+    font-size: 22pt;
+    color: white;
+}
+
+.info{
+    display: flex;
+}
+
+.number {
+    color: red;
+    margin-left: 5px;
+}
+
+#data-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 300px;
+    height: 800px;
+    padding: 10px;
+}
+
+#timer {
+    font-size: 25pt;
 }

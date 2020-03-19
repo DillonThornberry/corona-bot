@@ -26,7 +26,11 @@ const onMessageHandler = (target, context, message, self) => {
     if (self || knownBots.includes(context.username)) { return }
     if (target === '#americanape'){
         if (message === '!info'){
-            client.say('#americanape', 'info')
+            client.say('#americanape', `We are watching chat in the top 100 ${mainOptions.game ? 
+                mainOptions.game + ' ' : ''}streams on Twitch. I am patient zero. I comment in one of the streams.
+                Anyone who comments within ${mainOptions.transmissionTime} seconds after me will become "infected".
+                Anyone who comments after an infected person becomes infected. If an infected person comments in another
+                top 100 stream, they start infecting people in that stream.`)
         }
     } else {
         corona.newMessage(target, context)

@@ -4,11 +4,35 @@
         <link rel="stylesheet" href="index.css"></link>
     </head>
     <body onclick="end()">
-        <h2 id="user-title">Users</h2>
-        <h1 id="user-count"></h1>
-        <h2 id="channel-title">Channels</h2>
-        <h1 id="channel-count"></h1>
-        <h1 id="timer"></h1>
+        <div id="data-container">
+            <div class="info">
+                <h2 id="game-title">Category: </h2>
+                <h2 id="game-name" class="number"></h2>
+            </div>
+
+            <div class="info">
+                <h2 id="transmission-title">Transmission Time: </h2>
+                <h2 id="transmission-time" class="number"></h2>
+            </div>
+
+            <div class="info">
+                <h2 id="user-title">Infected Users: </h2>
+                <h2 id="user-count" class="number"></h2>
+            </div>
+
+            <div class="info">
+                <h2 id="channel-title">Infected Streams: </h2>
+                <h2 id="channel-count" class="number"></h2>
+            </div>
+    
+            <div class="info">
+                <h2 id="user-rate-title">User Infection Rate: </h2>
+                <h2 id="user-rate" class="number"></h2>
+            </div>
+
+            <h1 id="timer"></h1> 
+            <h1 id="notification"></h1>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
